@@ -1,5 +1,5 @@
 import express from 'express';
-import path, { dirname } from 'path';
+import path from 'path';
 
 interface Options{
     port: number;
@@ -17,11 +17,6 @@ export class Server {
     }
 
     async start() {
-        //* Middleware
-        
-
-        //* Public folder
-
 
         this.app.use(express.static(this.publicPath));
         this.app.get('*', (req, res) => {
